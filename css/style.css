@@ -179,7 +179,7 @@ body {
     content: '';
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url('./images/icon-arrow-right.svg');
+    background-image: url('../images/icon-arrow-right.svg');
     display: inline-block;
     transform: rotate(-90deg);
     transition: all 0.3s ease;
@@ -584,7 +584,7 @@ body {
     align-content: center;
     flex-direction: row;
     margin: auto;
-    background-image: url('./images/background_feature.svg');
+    background-image: url('../images/background_feature.svg');
     background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -642,7 +642,7 @@ body {
     list-style: none;
 }
 .features > .container > div:last-child ul li {
-    background: url('./images/icon-check.svg') no-repeat left top; 
+    background: url('../images/icon-check.svg') no-repeat left top; 
     padding: 0 0 0 2rem;
     margin: 0.3rem 0 0 0;
 }
@@ -854,7 +854,7 @@ body {
     text-align: left;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div ul li {
-    background: url('./images/icon-check.svg') no-repeat left top; 
+    background: url('../images/icon-check.svg') no-repeat left top; 
     padding: 0 0 0 2rem;
     margin: 0.3rem 0 0 0;
 }
