@@ -1434,3 +1434,142 @@ body {
         margin-top: 0.5rem;
     }
 }
+
+/* START: Animarted Sliders mod */
+.about .slides {
+    overflow: hidden;
+}
+.slides_viewport {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slide > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide > div > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slide > div > div:first-child img:first-child {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.slide > div > div:first-child img:last-child {
+    position: absolute;
+    width: 60%;
+    max-width: 200px;
+    height: auto;
+}
+
+.slides_dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-dot.active {
+    background: var(--Color-Primary-Primary-600);
+}
+.about .slides .slide {
+    height: min-content;
+}
+@media (max-width: 768px) {
+    .slide {
+        padding: 15px;
+    }
+
+    .slide > div {
+        gap: 15px;
+    }
+
+    .slide > div > div:first-child img:first-child {
+        max-width: 250px;
+    }
+
+    .slide > div > div:first-child img:last-child {
+        max-width: 150px;
+    }
+
+    .slide h3 {
+        font-size: 1.5rem;
+    }
+
+    .slide p {
+        font-size: 1rem;
+    }
+
+    .slide ul {
+        padding-left: 20px;
+    }
+
+    .slide-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        padding: 10px;
+    }
+
+    .slide > div {
+        gap: 10px;
+    }
+
+    .slide > div > div:first-child img:first-child {
+        max-width: 200px;
+    }
+
+    .slide > div > div:first-child img:last-child {
+        max-width: 120px;
+    }
+
+    .slide h3 {
+        font-size: 1.25rem;
+    }
+
+    .slide p {
+        font-size: 0.9rem;
+    }
+
+    .slide ul {
+        padding-left: 15px;
+    }
+
+    .slide-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+/* END: Animarted Sliders mod */

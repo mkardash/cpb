@@ -56,4 +56,76 @@ window.addEventListener('scroll', () => {
     }
     
     lastScroll = currentScroll;
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const viewport = document.querySelector('.slides_viewport');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.slides_dots');
+    let currentSlide = 0;
+    let autoplayInterval;
+    let isMouseOver = false;
+
+    // Create dots navigation
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('slide-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.slide-dot');
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        viewport.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    }
+
+    function startAutoplay() {
+        if (!isMouseOver) {
+            autoplayInterval = setInterval(nextSlide, 4000);
+        }
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    // Stop Slide on mouse over viewport
+    viewport.addEventListener('mouseenter', () => {
+        isMouseOver = true;
+        stopAutoplay();
+    });
+
+    viewport.addEventListener('mouseleave', () => {
+        isMouseOver = false;
+        startAutoplay();
+    });
+
+    // Stop Slide on mouse over dots
+    dotsContainer.addEventListener('mouseenter', () => {
+        isMouseOver = true;
+        stopAutoplay();
+    });
+
+    dotsContainer.addEventListener('mouseleave', () => {
+        isMouseOver = false;
+        startAutoplay();
+    });
+
+    // Init Slider Actions
+    startAutoplay();
 }); 
