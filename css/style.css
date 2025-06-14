@@ -895,7 +895,7 @@ body {
 .paymemnt-plans > .container > .paymemnt-plans-cnt {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;   
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div {
@@ -917,35 +917,18 @@ body {
     font-weight: 400;
     line-height: 32px; /* 133.333% */
 }
-.paymemnt-plans > .container > .paymemnt-plans-cnt > div > h4 {
-    color: var(--Color-Primary-Primary-800);
+.paymemnt-plans > .container > .paymemnt-plans-cnt > div > h5 {
+    color: var(--Color-Primary-Primary-800, #BF7805);
     text-align: center;
     font-family: Outfit;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 120% */
+    line-height: 24px;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div > img {
     margin-top: 1rem;
     width: 100%;
-}
-.paymemnt-plans > .container > .paymemnt-plans-cnt > div > .badge-cnt {  
-    position: relative;
-}
-.paymemnt-plans > .container > .paymemnt-plans-cnt > div > .badge-cnt .badge {
-    right: 0;
-    position: absolute;
-    border-radius: 4px;
-    padding: 8px 16px;
-    border: 1px solid var(--Color-Primary-Primary-600);
-    background: var(--Color-Primary-Primary-100);
-}
-.paymemnt-plans > .container > .paymemnt-plans-cnt > div > .badge-cnt .badge.tilted {
-    transform: rotate(17.856deg);
-}
-.paymemnt-plans > .container > .paymemnt-plans-cnt > div > .badge-cnt .badge.slightly-tilted {
-    transform: rotate(1.141deg);
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div ul {
     padding-top: 1rem;
@@ -953,7 +936,7 @@ body {
     text-align: left;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div ul li {
-    background: url('../images/icon-check.svg') no-repeat left top; 
+    background: url('../images/icon-check-bright.svg') no-repeat left top; 
     padding: 0 0 0 2rem;
     margin: 0.3rem 0 0 0;
 }
@@ -963,7 +946,7 @@ body {
         padding: 0.5rem;
         margin-top: 1rem;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;   
     }
     .paymemnt-plans > .container > .paymemnt-plans-cnt > div {
@@ -981,6 +964,15 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .paymemnt-plans > .container > .paymemnt-plans-cnt {
+        padding: 0.5rem;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;   
     }
 }
 /* Image Block */
