@@ -60,6 +60,9 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const viewport = document.querySelector('.slides_viewport');
+    
+    if(!viewport) { return }
+
     const slides = document.querySelectorAll('.slide');
     const dotsContainer = document.querySelector('.slides_dots');
     let currentSlide = 0;
@@ -128,4 +131,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Init Slider Actions
     startAutoplay();
+}); 
+
+// Init sanwich mobile menu item
+document.addEventListener('DOMContentLoaded', function() {
+    const sandwich = document.querySelector('.sanwich');
+    
+    if (sandwich) {
+        sandwich.addEventListener('click', function() {
+            this.classList.toggle('opened');
+        });
+    }
 }); 

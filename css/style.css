@@ -64,7 +64,15 @@ body {
 .header.scroll-down {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
-
+/* Mobile UI */
+@media only screen and (max-width: 1300px) {
+    .header {
+        padding: 0.5rem;
+    }
+    .header .container {
+        padding: 0;
+    }
+}
 .nav {
     padding: 0;
 }
@@ -151,14 +159,18 @@ body {
 .primary-button.stretch {
    min-width: 100%;
 }
-
-.nav-list {
+.nav-menu-cnt {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-
-.nav-list a {
+.nav-menu a {
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.3s ease;
@@ -171,11 +183,11 @@ body {
     justify-content: left;
     border-bottom: 0.125rem solid transparent;
 }
-.nav-list a:active, .nav-list a:hover, .nav-list a.active {
+.nav-menu a:active, .nav-menu a:hover, .nav-menu a.active {
     color: var(--primary-color);
     border-bottom: 0.125rem solid var(--Color-Primary-Primary-800);
 }
-.nav-list .submenu > a::after {
+.nav-menu .submenu > a::after {
     content: '';
     width: 1.5rem;
     height: 1.5rem;
@@ -184,11 +196,11 @@ body {
     transform: rotate(-90deg);
     transition: all 0.3s ease;
 }
-.nav-list .submenu .submenu-cnt{ 
+.nav-menu .submenu .submenu-cnt{ 
     position: relative;
     display: none;
 }
-.nav-list .submenu .submenu-cnt .submenu-items {
+.nav-menu .submenu .submenu-cnt .submenu-items {
     position: absolute;
     border: 0.0625rem solid var(--Color-Primary-Primary-800);
     background: #FFF;
@@ -197,21 +209,108 @@ body {
     padding: 1rem;
     text-align: left;
 }
-.nav-list .submenu:hover a::after {
+.nav-menu .submenu:hover a::after {
     transform: rotate(0deg);
 }
-.nav-list .submenu:hover .submenu-cnt {
+.nav-menu .submenu:hover .submenu-cnt {
     display: block;
 }
-.nav-list--right {
+.nav-menu--right {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 /* Mobile UI */
 @media only screen and (max-width: 1300px) { 
-    .nav-list {
+    .nav-menu-cnt {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        max-height: calc(100VH - 90px);
+        justify-content: flex-start;
+        flex-direction: column;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    }
+    .nav-menu {
+        margin-top: 1rem;
+        gap: 0.5rem;
+        width: calc(100% - 2rem);
+    }
+    .nav-menu-cnt .sanwich {
         display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 38px;
+        height: 28px;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        padding: 0.5rem;
+    }
+    .nav-menu-cnt .sanwich span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+    .nav-menu-cnt .sanwich.opened span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+    .nav-menu-cnt .sanwich.opened span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .nav-menu-cnt .sanwich.opened span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+    .nav-menu .submenu > a::after {
+        background-image: none;
+    }
+    .nav-menu, .nav-menu-right {
+        flex-direction: column;
+    } 
+    .nav-menu .submenu-cnt  {
+        position: relative !important;
+        display: block !important;
+    } 
+    .nav-menu .submenu-cnt .submenu-items {
+        position: relative !important;
+        border: none !important;
+        background: none !important;
+        box-shadow: none !important;
+        padding: 0.5rem !important;
+    }
+    .nav-menu .submenu-cnt .submenu-items a:before {
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url('../images/icon-arrow-right.svg');
+        transform: rotate(-90deg);
+    }
+    .nav-menu--right {
+        width: calc(100% - 2rem);
+        flex-direction: column;
+    }
+    .nav-menu--right li .primary-button {
+        width: 100%;
+        margin-block: 1.5rem;
+    }
+    .nav-menu-cnt:has(:not(.sanwich.opened)) .nav-menu, 
+    .nav-menu-cnt:has(:not(.sanwich.opened)) .nav-menu--right { 
+        display: none;
+    }
+    .nav-menu-cnt:has(.sanwich.opened) {
+        background-color: var(--background-color);
+    }
+    .nav-menu-cnt:has(.sanwich.opened) .nav-menu, 
+    .nav-menu-cnt:has(.sanwich.opened) .nav-menu--right {
+        display: flex;
     }
 }
 /* Hero Section */
@@ -1573,3 +1672,4 @@ body {
     }
 }
 /* END: Animarted Sliders mod */
+
