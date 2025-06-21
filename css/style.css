@@ -1180,7 +1180,10 @@ body {
     justify-content: center;
     margin-right: -1.875rem;
     margin-top: 0.5rem;
-    display: none;
+    cursor: pointer;
+}
+.faqs .faq.expanded .faq-expand-collapse::after {
+    content: '-';
 }
 .faqs > .container {
     flex-wrap: wrap;
@@ -1242,6 +1245,16 @@ body {
     font-weight: 400;
     line-height: 1.75rem;
     text-align: left;
+    cursor: pointer;
+}
+.faq > div:not(.faq-expand-collapse) {
+    transition: height 0.5s ease;
+    overflow: hidden;
+    height: 0.1rem;
+}
+.faq.expanded > div:not(.faq-expand-collapse) {
+    height: max-content;
+    height: calc-size(max-content, size);
 }
 .faqs > .container > .faq > div > p {
     color: var(--System-S600);

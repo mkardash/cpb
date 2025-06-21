@@ -133,13 +133,31 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoplay();
 }); 
 
-// Init sanwich mobile menu item
+// Init sandwich mobile menu item
 document.addEventListener('DOMContentLoaded', function() {
-    const sandwich = document.querySelector('.sanwich');
+    const sandwich = document.querySelector('.sandwich');
     
-    if (sandwich) {
-        sandwich.addEventListener('click', function() {
-            this.classList.toggle('opened');
+    if (!sandwich) { return; }
+
+    sandwich.addEventListener('click', function() {
+        this.classList.toggle('opened');
+    });
+}); 
+
+// FAQs
+document.addEventListener('DOMContentLoaded', function() {
+    const faqs = document.querySelectorAll('.faqs .faq'); 
+
+    if (!faqs) { return; }
+    
+    for(var i = 0; i < faqs.length; i++) { 
+        let title = faqs[i].querySelector('h4');
+        let expandCollapse = faqs[i].querySelector('.faq-expand-collapse');
+
+        [title, expandCollapse].map(el => {
+            el.addEventListener("click",(e) => {
+                e.target.parentNode.classList.toggle('expanded')
+            });
         });
     }
 }); 
