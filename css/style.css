@@ -1083,9 +1083,9 @@ main {
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt {
     padding: 1.5rem;
     border-radius: 1.5rem;
-    background: #FFF; 
     border: .125rem solid var(--Color-Primary-Primary-800);
     background: var(--Color-System-color-System-50);
+    width: 100%;
 }
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table {
     width: 100%;
