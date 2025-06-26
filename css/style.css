@@ -1119,8 +1119,28 @@ main {
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
+    .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt {
+        padding: .5rem;
+        margin-top: 1rem;
+    }
+    .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > div {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .paymemnt-plans-compare > .container > h3 {
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+    .paymemnt-plans-compare > .container > p {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
     .paymemnt-plans-compare > .container {
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table th {
         font-size: 1rem;
