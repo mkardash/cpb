@@ -676,7 +676,8 @@ main {
 /* Slogan Section */
 .slogan {
     text-transform: uppercase;
-    margin-top: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 .slogan .container {
     flex-wrap: wrap;
@@ -692,12 +693,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color: #E6D3C5;
+    color: var(--Color-Primary-Primary-800);
     font-family: "Young Serif";
-    font-size: 3rem;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 3rem;
+    line-height: 7rem;
 }
 .slogan h2 span.dark {
     color: #652815;
