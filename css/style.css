@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .container {
         padding: 0 1rem;
     }
@@ -68,7 +68,7 @@ body {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) { 
+@media only screen and (max-width: 81.25rem) { 
     .header {
         padding: .5rem;
     }
@@ -96,6 +96,11 @@ main {
     background-position: bottom left;
     background-size: inherit;
     background-repeat: no-repeat;
+}
+@media only screen and (max-width:1439.0619rem) { 
+    main {
+        padding: 0 1rem;
+    }
 }
 /* Buttons */
 /* Primary */
@@ -158,7 +163,7 @@ main {
      width: 100%;
   }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .primary-button.wide {
         min-width: 15rem;
         width: 15rem;
@@ -256,7 +261,7 @@ main {
     gap: 2rem;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) { 
+@media only screen and (max-width: 81.25rem) { 
     .nav-menu-cnt {
         position: absolute;
         padding-left: 1rem;
@@ -434,7 +439,7 @@ main {
     margin-top: 2rem;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .hero {
         padding: 8rem 0 2rem;
     }
@@ -611,7 +616,7 @@ main {
     margin-top: 1rem;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .about h2 {
         font-size: 1.75rem;
         font-style: normal;
@@ -709,7 +714,7 @@ main {
     color: var(--Color-Primary-Primary-300);
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .slogan {
         text-transform: uppercase;
         margin-top: 4rem;
@@ -814,7 +819,12 @@ main {
     margin: .3rem 0 0 0;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width:1439.0619rem) { 
+    .features {
+        margin-inline: -1rem;
+    }
+}
+@media only screen and (max-width: 81.25rem) {
     .features .container {
         flex-direction: column;
         padding: 2rem 0;
@@ -858,8 +868,8 @@ main {
         font-style: normal;
         font-weight: 400;
         line-height: 1.125rem;
-        padding: 0 0 0 24px;
-        background-size: 19.2px;
+        padding: 0 0 0 1.5rem;
+        background-size: 1.2rem;
     }
 }
 /* Features with screenshots*/
@@ -904,7 +914,7 @@ main {
     line-height: 2rem;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .features_with_screenshot .container {
         flex-direction: column;
     }
@@ -924,7 +934,7 @@ main {
         line-height: 2rem;
     }
     .features_with_screenshot > .container > div:last-child {
-        padding-inline: 16px;
+        padding-inline: 1rem;
         font-size: .875rem;
         font-style: normal;
         font-weight: 400;
@@ -1012,8 +1022,8 @@ main {
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div p {
     padding-top: 1rem;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: .875rem;
+    line-height: 1.125rem;
     color: #2A2D2D;
     text-align: center;
 }
@@ -1023,7 +1033,7 @@ main {
     margin: .3rem 0 0 0;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .paymemnt-plans > .container > .paymemnt-plans-cnt {
         padding: .5rem;
         margin-top: 1rem;
@@ -1132,7 +1142,7 @@ main {
         padding: 2rem;
     }
 }
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt {
         padding: .5rem;
         margin-top: 1rem;
@@ -1205,7 +1215,7 @@ main {
     padding: 1rem;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .image > .container > img {
         padding: 1rem;
     }
@@ -1269,13 +1279,13 @@ main {
 }
 
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .image-two-columns-with-texts > .container {
         flex-direction: row;
         border-radius: .75rem;
         padding: 1rem 1.5rem;
         gap: .625rem;
-        margin-inline: 16px;
+        margin-inline: 1rem;
     }
     .image-two-columns-with-text > .container > div {
         width: 100%;
@@ -1332,7 +1342,7 @@ main {
 }
 
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .image-two-columns > .container {
         flex-direction: column;
         border-radius: .75rem;
@@ -1464,7 +1474,7 @@ main {
     text-align: left;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .faqs > .container > img {
         margin-inline: -1rem;
     }
@@ -1562,7 +1572,7 @@ main {
     text-align: left;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .payments {
         margin-top: 4rem;
     }
@@ -1683,7 +1693,7 @@ main {
     resize: vertical;
 }
 /* Mobile UI */
-@media only screen and (max-width: 89.99rem) {
+@media only screen and (max-width: 81.25rem) {
     .contact {    
         padding-top: 4rem;
     }
