@@ -41,7 +41,7 @@ body {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0rem;
 }
 .container.flex-center {
     display: flex;
@@ -671,7 +671,7 @@ main {
 /* Slogan Section */
 .slogan {
     text-transform: uppercase;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 .slogan .container {
     flex-wrap: wrap;
@@ -710,6 +710,10 @@ main {
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
+    .slogan {
+        text-transform: uppercase;
+        margin-top: 4rem;
+    }
     .slogan h2 {
         font-size: 1.5rem;
         font-style: normal;
@@ -957,6 +961,7 @@ main {
     font-weight: 400;
     line-height: 2rem;
     margin-top: 1.5rem;
+    margin-inline: 1rem;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt {
     margin-top: 1rem;
@@ -1175,8 +1180,8 @@ main {
     padding: 2rem 0;
 }
 .image > .container > img {
-    width: calc(100% - 2rem);
-    margin: 1rem;
+    width: 100%;
+    padding: 1rem;
 }
 .image > .container > h3 {
     color: #652815;
@@ -1196,6 +1201,7 @@ main {
     font-weight: 400;
     line-height: 2rem;
     margin-top: 1.5rem;
+    padding: 1rem;
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
@@ -1276,7 +1282,7 @@ main {
         font-weight: 400;
         line-height: 2rem;
     }
-    .image-two-columns-with-text > .container > div >p {
+    .image-two-columns-with-text > .container > div > p {
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
@@ -1284,6 +1290,7 @@ main {
     }
     .image-two-columns-with-text > .container > img {
         width: 100%;
+        margin: 1rem 0;
     }
 }
 /* Image Two Columns Block */
@@ -1382,7 +1389,7 @@ main {
 }
 .faqs > .container > img {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-inline: -2rem;
 }
 .faqs > .container > h3 {
@@ -1393,8 +1400,9 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 4.5rem;
+    margin-bottom: 1.5rem;
 }
-.faqs > .container > div >p {
+.faqs > div > p {
     color: var(--Color-System-color-System-800);
     text-align: center;
     font-family: Outfit;
@@ -1402,9 +1410,9 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 2rem;
-    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
-.faqs > .container > div > p > a {
+.faqs  > div > p > a {
     color: #652815;
     text-decoration: underline;
 }
@@ -1473,7 +1481,7 @@ main {
 }
 /* Payments */
 .payments {
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 .payments > .container {
     flex-wrap: wrap;
@@ -1550,6 +1558,9 @@ main {
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
+    .payments {
+        margin-top: 4rem;
+    }
     .payments > .container > h3 {
         font-size: 1.75rem;
         font-style: normal;
@@ -1594,7 +1605,7 @@ main {
 }
 /* Contact Form */
 .contact {    
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
 }
 .contact > .container {
@@ -1658,12 +1669,19 @@ main {
     border: .0625rem solid var(--Color-System-color-System-300);
     background: var(--Color-System-color-System-50);
 }
+.form-group input:focus {
+    outline-color: var(--Color-Primary-Primary-800);
+    border: .0625rem solid var(--Color-Primary-Primary-8s00);
+}
 .form-group textarea {
     height: 9.375rem;
     resize: vertical;
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
+    .contact {    
+        padding-top: 4rem;
+    }
     .contact > .container > h3 {
         font-size: 1.75rem;
         font-style: normal;
