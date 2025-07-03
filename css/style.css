@@ -68,7 +68,7 @@ body {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
 }
 /* Mobile UI */
-@media only screen and (max-width: 81.25rem) { 
+@media only screen and (max-width: 81.25rem) {
     .header {
         padding: .5rem;
     }
@@ -97,7 +97,7 @@ main {
     background-size: inherit;
     background-repeat: no-repeat;
 }
-@media only screen and (max-width:1439.0619rem) { 
+@media only screen and (max-width:1439.0619rem) {
     main {
         padding: 0 1rem;
     }
@@ -209,7 +209,7 @@ main {
     transform: rotate(-90deg);
     transition: all 0.3s ease;
 }
-.nav-menu .submenu .submenu-cnt{ 
+.nav-menu .submenu .submenu-cnt{
     position: relative;
     display: none;
 }
@@ -260,8 +260,14 @@ main {
     list-style: none;
     gap: 2rem;
 }
+@media only screen and (min-width: 81.251rem) {
+    .nav-menu--right {
+        width: 214px;
+        justify-content: right;
+    }
+}
 /* Mobile UI */
-@media only screen and (max-width: 81.25rem) { 
+@media only screen and (max-width: 81.25rem) {
     .nav-menu-cnt {
         position: absolute;
         padding-left: 1rem;
@@ -318,11 +324,11 @@ main {
     }
     .nav-menu, .nav-menu-right {
         flex-direction: column;
-    } 
+    }
     .nav-menu .submenu-cnt  {
         position: relative !important;
         display: block !important;
-    } 
+    }
     .nav-menu .submenu-cnt .submenu-items {
         position: relative !important;
         border: none !important;
@@ -346,8 +352,8 @@ main {
         width: 100%;
         margin-block: 1.5rem;
     }
-    .nav-menu-cnt:has(:not(.sandwich.opened)) .nav-menu, 
-    .nav-menu-cnt:has(:not(.sandwich.opened)) .nav-menu--right { 
+    .nav-menu-cnt:has(:not(.sandwich.opened)) .nav-menu,
+    .nav-menu-cnt:has(:not(.sandwich.opened)) .nav-menu--right {
         display: none;
     }
     .nav-menu-cnt:has(.sandwich.opened) {
@@ -355,7 +361,7 @@ main {
         height: calc(100%);
         justify-content: space-between;
     }
-    .nav-menu-cnt:has(.sandwich.opened) .nav-menu, 
+    .nav-menu-cnt:has(.sandwich.opened) .nav-menu,
     .nav-menu-cnt:has(.sandwich.opened) .nav-menu--right {
         display: flex;
     }
@@ -430,7 +436,7 @@ main {
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 2rem; 
+    line-height: 2rem;
     max-width: 70%;
     margin: auto;
     margin-top: 2rem;
@@ -470,7 +476,7 @@ main {
         font-weight: 400;
         line-height: 1.5rem;
     }
-    .hero p + p { 
+    .hero p + p {
         margin-top: 1.5rem;
     }
     .hero img {
@@ -643,7 +649,7 @@ main {
     }
     .about .slides .slide > div:first-child > img:first-child {
         width: 22.3125rem;
-    }   
+    }
     .about .slides .slide > div:first-child > img:last-child {
         margin-left: 0%;
     }
@@ -667,7 +673,7 @@ main {
     .about .slides .slide > div:first-child {
         margin-top: -0.5rem;
     }
-    
+
     .about .slides .slide > div:first-child > img:first-child,
     .about .slides .slide:nth-child(odd) > div:first-child > img:first-child {
         transform: unset;
@@ -815,12 +821,12 @@ main {
     list-style: none;
 }
 .features > .container > div:last-child ul li {
-    background: url('../images/icon-check.svg') no-repeat left top; 
+    background: url('../images/icon-check.svg') no-repeat left top;
     padding: 0 0 0 2rem;
     margin: .3rem 0 0 0;
 }
 /* Mobile UI */
-@media only screen and (max-width:1439.0619rem) { 
+@media only screen and (max-width:1439.0619rem) {
     .features {
         margin-inline: -1rem;
     }
@@ -979,12 +985,12 @@ main {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;   
+    gap: 1rem;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div {
     padding: 1.5rem;
     border-radius: 1.5rem;
-    background: #FFF; 
+    background: #FFF;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div.highlighted {
     border: .125rem solid var(--Color-Primary-Primary-800);
@@ -1029,7 +1035,7 @@ main {
     text-align: center;
 }
 .paymemnt-plans > .container > .paymemnt-plans-cnt > div ul li {
-    background: url('../images/icon-check-bright.svg') no-repeat left top; 
+    background: url('../images/icon-check-bright.svg') no-repeat left top;
     padding: 0 0 0 2rem;
     margin: .3rem 0 0 0;
 }
@@ -1040,7 +1046,7 @@ main {
         margin-top: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;   
+        gap: 1rem;
     }
     .paymemnt-plans > .container > .paymemnt-plans-cnt > div {
         padding: 1rem;
@@ -1065,7 +1071,7 @@ main {
         margin-top: 1rem;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;   
+        gap: 1rem;
     }
 }
 /* Payment Plans Compare */
@@ -1109,7 +1115,7 @@ main {
 }
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table {
     width: 100%;
-} 
+}
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table th {
     font-family: 'Outfit';
     font-style: normal;
@@ -1131,9 +1137,9 @@ main {
     text-align: left;
     padding: 1rem;
 }
-.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table th:nth-child(2), 
+.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table th:nth-child(2),
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table th:nth-child(3),
-.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(2), 
+.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(2),
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(3) {
     text-align: center;
 }
@@ -1620,7 +1626,7 @@ main {
     }
 }
 /* Contact Form */
-.contact {    
+.contact {
     padding-top: 5rem;
     padding-bottom: 4rem;
 }
@@ -1695,7 +1701,7 @@ main {
 }
 /* Mobile UI */
 @media only screen and (max-width: 81.25rem) {
-    .contact {    
+    .contact {
         padding-top: 4rem;
     }
     .contact > .container > h3 {
@@ -1930,4 +1936,3 @@ main {
     }
 }
 /* END: Animarted Sliders mod */
-
