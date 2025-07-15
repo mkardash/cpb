@@ -1143,6 +1143,10 @@ main {
 .paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(3) {
     text-align: center;
 }
+.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(2),
+.paymemnt-plans-compare > .container > .paymemnt-plans-compare-cnt > table td:nth-child(3) {
+    font-size: 28px;
+}
 /* Mobile UI */
 @media only screen and (max-width: 90rem) {
     .paymemnt-plans-compare > .container {
